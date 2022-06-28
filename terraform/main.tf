@@ -195,6 +195,15 @@ resource "aws_iam_policy" "node_additional" {
       {
           "Effect": "Allow",
           "Action": [
+              "dynamodb:*",
+              "personalize:*",
+              "route53:*"
+          ],
+          "Resource": "*"
+      },
+      {
+          "Effect": "Allow",
+          "Action": [
               "iam:CreateServiceLinkedRole"
           ],
           "Resource": "*",

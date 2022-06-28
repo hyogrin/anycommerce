@@ -35,7 +35,7 @@ user:
 
 # (Required) Change this to your own ALB arn. You can find in ACM dashboard.
     alb.ingress.kubernetes.io/certificate-arn: >-
-      arn:aws:acm:ap-northeast-2:123456789012:certificate/cb9c46f6-9737-4c87-802c-341c26c7b3df
+      arn:aws:acm:ap-northeast-2:994385297847:certificate/cb9c46f6-9737-4c87-802c-341c26c7b3df
 ```
 
 

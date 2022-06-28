@@ -16,8 +16,9 @@ env:
   AWS_REGION: "ap-northeast-2"
   PRODUCT_DDB_TABLE_PRODUCTS: "products"
   PRODUCT_DDB_TABLE_CATEGORIES: "categories"
-  PRODUCT_WEB_ROOT_URL: "https://shop.sanghwa.people.aws.dev"
-  PRODUCT_IMAGE_ROOT_URL: "https://shop.sanghwa.people.aws.dev/images/"
+  PRODUCT_WEB_ROOT_URL: ""
+  PRODUCT_IMAGE_ROOT_URL: "images/"
+  PRODUCT_DDB_ENDPOINT: https://dynamodb.ap-northeast-2.amazonaws.com
 
 secret:
 
