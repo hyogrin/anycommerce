@@ -1,0 +1,11 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - curl -sSL https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+  build:
+    commands:
+      - helm package anycommerce
+      - >
+        export version=$(helm show chart anycommerce | grep "version:" | awk -F ': ' '{ print $2 }')
+      - curl -u "sanghwa:river-5683" --data-binary "@anycommerce-$version.tgz" $CHARTMUSEUM_ADDRESS/api/charts

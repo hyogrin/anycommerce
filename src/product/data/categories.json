@@ -1,0 +1,59 @@
+[
+  {
+    "id": "0",
+    "name": "woman_clothes",
+    "image": "category.jpg",
+    "gender_affinity": "F"
+  },
+  {
+    "id": "100",
+    "name": "man_clothes",
+    "image": "category.jpg",
+    "gender_affinity": "M"
+  },
+  {
+    "id": "200",
+    "name": "cosmetics",
+    "image": "category.jpg"
+  },
+  {
+    "id": "300",
+    "name": "digital",
+    "image": "category.jpg"
+  },
+  {
+    "id": "400",
+    "name": "furniture",
+    "image": "category.jpg"
+  },
+  {
+    "id": "500",
+    "name": "baby",
+    "image": "category.jpg"
+  },
+  {
+    "id": "600",
+    "name": "foods",
+    "image": "category.jpg"
+  },
+  {
+    "id": "700",
+    "name": "sports",
+    "image": "category.jpg"
+  },
+  {
+    "id": "800",
+    "name": "lifestyle",
+    "image": "category.jpg"
+  },
+  {
+    "id": "900",
+    "name": "vacation",
+    "image": "category.jpg"
+  },
+  {
+    "id": "1000",
+    "name": "fashion",
+    "image": "category.jpg"
+  }
+]

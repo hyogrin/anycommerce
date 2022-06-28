@@ -1,0 +1,81 @@
+fullnameOverride: recommendation
+
+# Default values for recommendation.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: 269550163595.dkr.ecr.ap-northeast-2.amazonaws.com/anycommerce/recommendation
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "latest"
+
+env:
+  FLASK_RUN_HOST: "0.0.0.0"
+  FLASK_RUN_PORT: 80
+  PRODUCT_SERVICE_HOST: "product"
+  PRODUCT_SERVICE_PORT: 8001
+  AWS_DEFAULT_REGION: "ap-northeast-2"
+  POPULAR_ITEMS_ARN: 'arn:aws:personalize:ap-northeast-2:269550163595:campaign/anycommerce-popularity'
+  PERSONALIZED_RANKING_ARN: 'arn:aws:personalize:ap-northeast-2:269550163595:campaign/anycommerce-personalized-ranking'
+  RELATED_ITEMS_ARN: 'arn:aws:personalize:ap-northeast-2:269550163595:campaign/anycommerce-similar-items'
+  RECOMMENDED_FOR_YOU_ARN: arn:aws:personalize:ap-northeast-2:269550163595:campaign/anycommerce-recommended-for-you'
+  DATASET_ARN: 'arn:aws:personalize:ap-northeast-2:269550163595:dataset/anycommerce-dataset-group/USERS'
+
+secret:
+
+imagePullSecrets: []
+nameOverride: ""
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+service:
+  type: NodePort
+  port: 8005
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
