@@ -3,7 +3,7 @@ variable "aws_region" {
 }
 
 variable "aws_account_id" {
-  default = "123456789012"
+  default = "427083009791"
 }
 
 variable "k8s_version" {
@@ -15,7 +15,7 @@ variable "name" {
 }
 
 variable "domain_name" {
-  default = "dev.sanghwa.people.aws.dev"
+  default = "hyogrin.people.aws.dev"
 }
 
 variable "repos" {
@@ -33,7 +33,7 @@ variable "map_roles" {
 
   default = [
     {
-      rolearn  = "arn:aws:iam::123456:role/Admin"
+      rolearn  = "arn:aws:iam::427083009791:role/Admin"
       username = "Admin"
       groups   = ["system:masters"]
     },
